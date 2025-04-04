@@ -1,0 +1,43 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "../ui/use-toast";
+
+const TransactionPage: React.FC = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [paymentStatus, setPaymentStatus] = useState<string>("");
+  const [partialAmount, setPartialAmount] = useState<number>(0);
+  const [totalAmount, setTotalAmount] = useState<number>(0);
+
+  // Handle partial payment request
+  const handlePartialPaymentRequest = () => {
+    // Show processing state
+    setPaymentStatus("processing");
+    
+    // In a real app, you would create a partial payment request in your database
+    // and redirect the user to a waiting page
+    setTimeout(() => {
+      toast({
+        title: "Request Submitted",
+        description: "Your partial payment request has been sent to the admin for approval.",
+      });
+      
+      // Redirect to a waiting page or back to products
+      navigate("/products", { 
+        state: { 
+          partialPaymentRequested: true,
+          amount: partialAmount,
+          totalAmount: totalAmount
+        } 
+      });
+    }, 1500);
+  };
+
+  return (
+    <div>
+      {/* Render your component content here */}
+    </div>
+  );
+};
+
+export default TransactionPage; 
