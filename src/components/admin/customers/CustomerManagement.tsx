@@ -69,7 +69,7 @@ const CustomerManagement: React.FC = () => {
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(
     null
   );
-  const [showAddCustomerModal, setShowAddCustomerModal] = useState(false);
+  const [_showAddCustomerModal, setShowAddCustomerModal] = useState(false);
 
   const filteredCustomers = mockCustomers.filter(
     (customer) =>

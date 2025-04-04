@@ -51,7 +51,7 @@ export const TransactionPage: React.FC = () => {
     "full"
   );
   const [partialAmount, setPartialAmount] = useState<number>(0);
-  const [adminSuggestedAmount, setAdminSuggestedAmount] = useState<
+  const [adminSuggestedAmount, _setAdminSuggestedAmount] = useState<
     number | null
   >(null);
   const [showAdminDialog, setShowAdminDialog] = useState(false);

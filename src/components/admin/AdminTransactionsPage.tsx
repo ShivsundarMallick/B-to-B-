@@ -11,7 +11,7 @@ import { Button } from "../ui/button";
 import { useTransactions } from "../../context/TransactionContext";
 import { useToast } from "../ui/use-toast";
 import { Badge } from "../ui/badge";
-import { Separator } from "../ui/separator";
+// import { Separator } from "../ui/separator";
 
 export const AdminTransactionsPage: React.FC = () => {
   const {
@@ -22,7 +22,7 @@ export const AdminTransactionsPage: React.FC = () => {
   } = useTransactions();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [refreshCounter, setRefreshCounter] = useState(0);
+  const [, setRefreshCounter] = useState(0);
   const [storageDebugInfo, setStorageDebugInfo] = useState<string>("");
 
   // Check transactions periodically

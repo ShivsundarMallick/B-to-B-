@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { categories, subProducts } from "../../data/products";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Search } from "lucide-react";
 import { CategoryCard } from "./CategoryCard";
 import { CartDrawer } from "./CartDrawer";
-import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
+// import { useAuth } from "../../context/AuthContext";
+// import { useNavigate } from "react-router-dom";
+// import { useCart } from "../../context/CartContext";
 
 export const ProductPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const { isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const { totalItems } = useCart();
+  // const { isAuthenticated } = useAuth();
+  // const navigate = useNavigate();
+  // const { totalItems } = useCart();
 
   // Filter categories based on search query and selected category
   const filteredCategories = categories.filter((category) => {
@@ -41,9 +41,9 @@ export const ProductPage = () => {
     return true;
   });
 
-  const handleViewCart = () => {
-    navigate("/cart");
-  };
+  // const handleViewCart = () => {
+  //   navigate("/cart");
+  // };
 
   return (
     <div className="min-h-screen flex flex-col">

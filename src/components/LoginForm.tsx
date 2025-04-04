@@ -21,7 +21,7 @@ export default function LoginForm() {
   const [otp, setOtp] = useState("");
   const [otpGenerated, setOtpGenerated] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
-  const [verified, setVerified] = useState(false);
+  const [_verified, setVerified] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
 

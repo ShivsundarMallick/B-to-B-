@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { mockCustomers } from "./CustomerManagement";
-import { Button } from "../../../components/ui/button";
+// import { Button } from "../../../components/ui/button";
 import { Input } from "../../../components/ui/input";
 import {
   Select,
@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../../components/ui/select";
-import { FileDown, Search } from "lucide-react";
+import { Search } from "lucide-react";
 
 // Mock purchase data
 export const mockPurchases = [

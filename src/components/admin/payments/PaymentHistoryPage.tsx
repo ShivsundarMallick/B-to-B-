@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import {
-  BarChart,
+  // BarChart,
   Calendar,
-  CreditCard,
-  FileText,
-  Filter,
-  Printer,
-  Search,
-  SlidersHorizontal,
+  // CreditCard,
+  // FileText,
+  // Filter,
+  // Printer,
+  // Search,
+  // SlidersHorizontal,
 } from "lucide-react";
 import { format } from "date-fns";
 import { Calendar as CalendarComponent } from "../../../components/ui/calendar";
@@ -24,7 +24,7 @@ interface DateRange {
   to: Date | undefined;
 }
 
-function CalendarDateRangePicker({
+export function CalendarDateRangePicker({
   className,
 }: React.HTMLAttributes<HTMLDivElement> & { className?: string }) {
   const [date, setDate] = useState<DateRange>({

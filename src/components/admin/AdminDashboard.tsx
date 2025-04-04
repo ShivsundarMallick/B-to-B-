@@ -9,10 +9,10 @@ import {
   ChevronRight,
   Calendar,
   PieChart,
-  ChevronLeft,
-  LayoutDashboard,
-  BarChart,
-  ShoppingCart,
+  // ChevronLeft,
+  // LayoutDashboard,
+  // BarChart,
+  // ShoppingCart,
 } from "lucide-react";
 import DashboardHeader from "./DashboardHeader";
 import KeyMetricsSection from "./KeyMetricsSection";
@@ -23,13 +23,13 @@ import PaymentStatusChart from "./charts/PaymentStatusChart";
 import TopProductsChart from "./charts/TopProductsChart";
 import PaymentManagement from "./PaymentManagement";
 import CustomerManagement from "./customers/CustomerManagement";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../../components/ui/select";
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "../../components/ui/select";
 import PaymentManagementModule from "./payments/PaymentManagementModule";
 
 export type TimeFilter = "day" | "week" | "month";
@@ -106,22 +106,26 @@ const AdminDashboard: React.FC = () => {
   };
 
   // Mock data for metrics
-  const metrics = {
-    totalSales: { value: "₹245,600", change: "+12.5%", isPositive: true },
-    averageOrder: { value: "₹3,456", change: "+5.2%", isPositive: true },
-    pendingPayments: { value: "₹54,320", change: "-8.1%", isPositive: true },
-    totalStock: { value: "1,245", change: "-3.4%", isPositive: false },
-  };
+  // const _metrics = {
+  //   totalSales: { value: "₹245,600", change: "+12.5%", isPositive: true },
+  //   averageOrder: { value: "₹3,456", change: "+5.2%", isPositive: true },
+  //   pendingPayments: { value: "₹54,320", change: "-8.1%", isPositive: true },
+  //   totalStock: { value: "1,245", change: "-3.4%", isPositive: false },
+  // };
 
   // Temporary components until the real ones are implemented
-  const BestSellingProducts = ({ timeFilter }: { timeFilter: TimeFilter }) => (
+  const BestSellingProducts = ({
+    timeFilter: _timeFilter,
+  }: {
+    timeFilter: TimeFilter;
+  }) => (
     <div className="h-64 flex items-center justify-center text-slate-500">
       Best selling products will be shown here
     </div>
   );
 
   const PaymentDistributionChart = ({
-    timeFilter,
+    timeFilter: _timeFilter,
   }: {
     timeFilter: TimeFilter;
   }) => (
@@ -130,13 +134,21 @@ const AdminDashboard: React.FC = () => {
     </div>
   );
 
-  const GrossProfitChart = ({ timeFilter }: { timeFilter: TimeFilter }) => (
+  const GrossProfitChart = ({
+    timeFilter: _timeFilter,
+  }: {
+    timeFilter: TimeFilter;
+  }) => (
     <div className="h-64 flex items-center justify-center text-slate-500">
       Gross profit chart will be shown here
     </div>
   );
 
-  const TopCustomers = ({ timeFilter }: { timeFilter: TimeFilter }) => (
+  const TopCustomers = ({
+    timeFilter: _timeFilter,
+  }: {
+    timeFilter: TimeFilter;
+  }) => (
     <div className="h-64 flex items-center justify-center text-slate-500">
       Top customers will be shown here
     </div>

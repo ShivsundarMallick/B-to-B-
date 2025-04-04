@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../../components/ui/card";
-import { ArrowUpRight, CreditCard, BanknoteIcon, Wallet } from "lucide-react";
+import { ArrowUpRight, BanknoteIcon, Wallet } from "lucide-react";
 import {
   BarChart,
   Bar,

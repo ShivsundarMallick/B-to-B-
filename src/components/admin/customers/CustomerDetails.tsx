@@ -58,7 +58,7 @@ const PaymentInvoiceTable = ({ payments }: { payments: any[] }) => (
 
 const CustomerDetails: React.FC<CustomerDetailsProps> = ({
   customer,
-  onBack,
+  // onBack,
 }) => {
   const [editing, setEditing] = useState(false);
   const [editedCustomer, setEditedCustomer] = useState<Customer>({

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   Category,
-  Product,
+  // Product,
   ProductVariant,
   ProductModel,
   SubProduct,
@@ -14,12 +14,12 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "../ui/accordion";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "../ui/accordion";
 import { Badge } from "../ui/badge";
 import { Separator } from "../ui/separator";
 import { useCart } from "../../context/CartContext";

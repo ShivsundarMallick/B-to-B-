@@ -19,9 +19,9 @@ import {
   Download,
   CreditCard,
   PlusCircle,
-  Edit,
-  Printer,
-  Send,
+  // Edit,
+  // Printer,
+  // Send,
   RotateCcw,
 } from "lucide-react";
 import { Input } from "../../../components/ui/input";
@@ -184,12 +184,12 @@ const PaymentInvoiceTable: React.FC<PaymentInvoiceTableProps> = ({
     console.log(`Processing refund for payment ${payment.id}`);
   };
 
-  const handleSendReminder = (payment: Payment) => {
-    // In a real application, this would call an API to send a payment reminder
-    console.log(
-      `Sending payment reminder for invoice ${payment.invoiceNumber}`
-    );
-  };
+  // const handleSendReminder = (payment: Payment) => {
+  //   // In a real application, this would call an API to send a payment reminder
+  //   console.log(
+  //     `Sending payment reminder for invoice ${payment.invoiceNumber}`
+  //   );
+  // };
 
   return (
     <div className="border rounded-lg overflow-hidden">

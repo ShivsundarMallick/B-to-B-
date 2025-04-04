@@ -1,9 +1,21 @@
 import React from "react";
 import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
-import { Product, products } from "../../data/products";
+import { products } from "../../data/products";
 import { useCart } from "../../context/CartContext";
 import { useToast } from "../ui/use-toast";
+
+// Define a local interface for the legacy product structure
+interface LegacyProduct {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  category: string;
+  stock: number;
+  related: string[];
+}
 
 interface ProductSuggestionsProps {
   productId: string;
@@ -22,8 +34,19 @@ export const ProductSuggestions: React.FC<ProductSuggestionsProps> = ({
     relatedProductIds.includes(p.id)
   );
 
-  const handleQuickAdd = (product: Product) => {
-    addToCart(product, 1);
+  const handleQuickAdd = (product: LegacyProduct) => {
+    // Create a CartItem from the product
+    addToCart({
+      id: product.id,
+      productId: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+      maxQuantity: product.stock,
+      company: product.category,
+    });
+
     toast({
       title: "Added to cart",
       description: `${product.name} added to your cart`,
@@ -64,7 +87,7 @@ export const ProductSuggestions: React.FC<ProductSuggestionsProps> = ({
                     variant="secondary"
                     size="sm"
                     className="text-xs px-2 py-1 h-7"
-                    onClick={() => handleQuickAdd(product)}
+                    onClick={() => handleQuickAdd(product as LegacyProduct)}
                   >
                     Quick Add
                   </Button>

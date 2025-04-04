@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "../../../components/ui/table.tsx";
 import { Button } from "../../../components/ui/button";
-import { ChevronDown, ChevronUp, Eye, FileText, Plus } from "lucide-react";
+import { ChevronDown, ChevronUp, Eye, FileText } from "lucide-react";
 import { mockCustomers } from "./mockData";
 
 interface Product {
